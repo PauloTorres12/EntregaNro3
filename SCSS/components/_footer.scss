@@ -1,0 +1,11 @@
+footer{
+    margin-top: 3rem;
+    text-align: center;
+    font-size: medium;
+}
+
+@media screen and (max-width: 350px){
+    footer{
+        font-size: small;
+    }
+}

@@ -1,0 +1,206 @@
+@charset "UTF-8";
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: medium;
+}
+
+@media screen and (max-width: 350px) {
+  footer {
+    font-size: small;
+  }
+}
+/*Importo las variables*/
+/*Dirección del flex*/
+header {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*Header de las páginas*/
+header {
+  padding: 1rem;
+}
+header .logo-header {
+  width: 11rem;
+  height: 6rem;
+}
+
+@media screen and (max-width: 350px) {
+  /*Header de mobile*/
+  header {
+    /*No quiero que aparezca el h1 ya que el logo nomás queda más clean*/
+  }
+  header h1 {
+    display: none;
+  }
+}
+/*Importo*/
+/*Dirección del flex*/
+/*Desktop*/
+main {
+  /*Texto index*/
+  /*Me gustaría que cuando me den la devolución del trabajo si me pueden agregar porque no he
+  podido hacer lo siguiente: Quiero que este texto quede centrado pero sin que (en desktop)
+  ocupe casi todo el ancho de la pantalla, sino que quede más cuadrado al centro, he intentado
+  con max-width y width común pero siempre que agrego o una o la otra se queda el texto a la
+  izquierda de la pantalla y no se centra, como se puede solucionar esto? (lo intenté de todas
+  las formas posibles pero no pude)*/
+  /*Texto Nosotros*/
+  /*Imagen del html nosotros*/
+  /*Tamaño de la carta para desktop*/
+  /*Mapa de preguntas*/
+  /*H3 de la seccion preguntas*/
+  /*Links*/
+  /*Cambio la altura de la imagen producto*/
+  /*Alerta de redes*/
+  /*Logo redes*/
+  /*Seccion videos*/
+}
+main .texto-1 {
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 2rem;
+}
+main .texto-2 {
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: auto;
+}
+main .alerta {
+  margin: 1rem;
+}
+main .acordeon {
+  margin-top: 1rem;
+}
+main .imagen-nosotros {
+  margin-top: 1rem;
+  max-width: 100%;
+  width: 35rem;
+}
+main .contenedor-imagen-nosotros {
+  text-align: center;
+}
+main .card {
+  width: 24rem;
+}
+main .mapa {
+  text-align: center;
+  width: auto;
+}
+main h3 {
+  text-align: center;
+  margin-top: 1rem;
+  text-decoration: underline;
+  color: rgb(207, 156, 90);
+}
+main ul {
+  text-align: center;
+  list-style: none;
+}
+main .links-html {
+  /*Acomodamos los links a las demás páginas*/
+  gap: 2rem;
+  margin-top: 1rem;
+  /*Quitamos la decoración a los links*/
+}
+main .links-html .links {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: larger;
+  /*Hover para el cambio de color*/
+}
+main .links-html .links:hover {
+  color: rgb(207, 156, 90);
+}
+main section {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+main .imagen-producto {
+  height: 22rem;
+}
+main .alertas-redes {
+  text-align: center;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+main .logo-redes {
+  margin-bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+main h2 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+main .texto-video {
+  text-align: center;
+  font-size: large;
+  text-decoration: underline;
+}
+main .videos {
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+main .video {
+  max-width: 100%;
+  width: 35rem;
+  height: 19rem;
+}
+
+/*MOBILE*/
+@media screen and (max-width: 350px) {
+  /*Pongo le dirección del flex en columna (no sé si es lo más estético) para
+  que no se salga de los margenes y por lo tanto me rompa el responsive*/
+  .links-html {
+    text-align: center;
+    flex-direction: column;
+  }
+  main {
+    /*Imagen del html nosotros*/
+    /*Margen para la alerta en mobile*/
+    /*Tamaño de la carta en mobile*/
+  }
+  main .imagen-nosotros {
+    text-align: center;
+    margin: 1rem;
+    width: 19rem;
+    margin-bottom: 0%;
+  }
+  main .alerta {
+    margin: 1rem;
+  }
+  main .card {
+    width: 19rem;
+  }
+  main .video {
+    max-width: 100%;
+    width: 32rem;
+    height: 16rem;
+  }
+}
+/*Para acomodar los links a las otras páginas dentro de un rango de
+píxeles que se rompe el responsive*/
+@media screen and (min-width: 351px) and (max-width: 500px) {
+  .links-html {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+/*Tipografía*/
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,184 @@
+/*Importo*/
+@import "../base/maps";
+@import "../base/mixins";
+@import "../base/variables";
+
+/*Desktop*/
+main{
+    /*Texto index*/
+    /*Me gustaría que cuando me den la devolución del trabajo si me pueden agregar porque no he
+    podido hacer lo siguiente: Quiero que este texto quede centrado pero sin que (en desktop)
+    ocupe casi todo el ancho de la pantalla, sino que quede más cuadrado al centro, he intentado
+    con max-width y width común pero siempre que agrego o una o la otra se queda el texto a la
+    izquierda de la pantalla y no se centra, como se puede solucionar esto? (lo intenté de todas
+    las formas posibles pero no pude)*/
+    .texto-1{
+        text-align: center;
+        padding: 1rem;
+        border: 1px solid rgb(0, 0, 0);
+        margin: 2rem;
+    }
+
+    /*Texto Nosotros*/
+    .texto-2{
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: auto;
+    }
+
+    .alerta{
+        margin: 1rem;
+    }
+
+    .acordeon{
+        margin-top: map-get($margenes, margen-top);
+    }
+
+     /*Imagen del html nosotros*/
+     .imagen-nosotros{
+        margin-top: map-get($margenes, margen-top);
+        max-width: 100%;
+        width: 35rem;
+    }
+
+    .contenedor-imagen-nosotros{
+        text-align: center;
+    }
+
+    /*Tamaño de la carta para desktop*/
+    .card{
+        width: 24rem;
+    }
+
+    /*Mapa de preguntas*/
+    .mapa{
+        text-align: center;
+        width: auto;
+    }
+
+    /*H3 de la seccion preguntas*/
+    h3{
+        text-align: center;
+        margin-top: map-get($margenes, margen-top);
+        text-decoration: underline;
+        color: rgb(207, 156, 90);
+    }
+
+    ul{
+        text-align: center;
+        list-style: none;
+    }
+
+    /*Links*/
+    .links-html{
+        /*Acomodamos los links a las demás páginas*/
+            gap: 2rem;
+            margin-top: map-get($margenes, margen-top);
+    
+            /*Quitamos la decoración a los links*/
+            .links{
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                font-size: larger;
+    
+                /*Hover para el cambio de color*/
+                &:hover{
+                    color: rgb(207, 156, 90);
+                }
+            }
+    }
+
+    section{
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        }   
+        /*Cambio la altura de la imagen producto*/
+        .imagen-producto{
+            height: 22rem;
+        }
+
+    /*Alerta de redes*/
+    .alertas-redes{
+        text-align: center;
+        margin-top: map-get($margenes, margen-top);
+        margin-right: map-get($margenes, margen-derizq);
+        margin-left: map-get($margenes, margen-derizq);
+    }
+
+    /*Logo redes*/
+    .logo-redes{
+        margin-bottom: 1rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    /*Seccion videos*/
+    h2{
+        text-align: center;
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }   
+
+    .texto-video{
+        text-align: center;
+        font-size: large;
+        text-decoration: underline;
+    }
+
+    .videos{
+        text-align: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .video{
+        max-width: 100%;
+        width: 35rem;
+        height: 19rem;
+    }
+}
+
+/*MOBILE*/
+@media screen and (max-width: 350px){
+    /*Pongo le dirección del flex en columna (no sé si es lo más estético) para
+    que no se salga de los margenes y por lo tanto me rompa el responsive*/
+    .links-html{
+        text-align: center;
+        flex-direction: $flex-direccion;
+    }
+    main{
+        /*Imagen del html nosotros*/
+        .imagen-nosotros{
+            @include imagen-nosotros()
+        }
+
+        /*Margen para la alerta en mobile*/
+        .alerta{
+            margin: 1rem;
+        }
+
+        /*Tamaño de la carta en mobile*/
+        .card{
+            width: 19rem;
+        }
+
+        .video{
+            max-width: 100%;
+            width: 32rem;
+            height: 16rem;
+        }
+    }
+}
+
+
+/*Para acomodar los links a las otras páginas dentro de un rango de
+píxeles que se rompe el responsive*/
+@media screen and (min-width: 351px) and (max-width: 500px){
+    .links-html{
+        text-align: center;
+        flex-direction: $flex-direccion;
+    }
+}

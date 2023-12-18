@@ -1,0 +1,24 @@
+/*Importo las variables*/
+@import "../base/variables";
+@import "../base/extends";
+
+/*Header de las páginas*/
+header{ 
+    @extend %propiedadesHeader;
+    padding: 1rem;
+
+    .logo-header{
+        width: 11rem;
+        height: 6rem;
+    }
+}
+
+@media screen and (max-width: 350px){
+    /*Header de mobile*/
+    header{
+        /*No quiero que aparezca el h1 ya que el logo nomás queda más clean*/
+        h1{
+            display: none;
+        }
+    }
+}
